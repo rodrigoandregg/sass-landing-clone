@@ -1,3 +1,295 @@
-// 751px aparece texto en search
-// 960px menu, versiones y menu del footer se ponen en horizontal
-// la grid pasa de 2c a 3c, twitter pasa al lado del copy
+// 960px menu, alert e intro se ponen en horizontal
+
+@import "reset";
+@import "boxes";
+
+body {
+  background: url(../images/svg/ondas.svg);
+}
+
+a:hover {
+  background-color: $hover;
+}
+
+.header {
+  @include flexBox($ai: start);
+  width: 100%;
+
+  &__gradient {
+    background: $gradient;
+    height: 0.25em;
+    width: 100%;
+  }
+}
+
+.banner {
+  @include flexBox($ai: start);
+  width: 100%;
+  background-color: $black;
+  color: $light;
+  padding: 3em 1em;
+  gap: 1.2em;
+
+  &__h2 {
+    font-size: 1.5em;
+    font-family: $second-font;
+  }
+
+  &__paragraph {
+    line-height: 1.5em;
+  }
+
+  &__span {
+    font-weight: 600;
+  }
+}
+
+.nav {
+  @include flexBox($ai: start);
+  width: 100%;
+  gap: 1.5em;
+  padding: 1em;
+
+  &__logo {
+    @include flexBox;
+    width: 4em;
+  }
+
+  &__menu {
+    @include flexBox($ai: start);
+    gap: 1.5em;
+    color: $links;
+    font-weight: 600;
+    width: 100%;
+  }
+
+  &__form {
+    background-color: $form;
+    width: 100%;
+    padding: 0.5em;
+    border-radius: 3em;
+    @include flexBox($ff: row nowrap, $jc: start);
+    gap: 1em;
+  }
+
+  &__search {
+    width: 100%;
+  }
+
+  &__icon {
+    width: 1.5em;
+    height: 1.5em;
+  }
+}
+
+.main {
+  @include flexBox;
+  width: 100%;
+
+  &__title {
+    font-size: 1.7em;
+    font-weight: 300;
+    margin: 1em;
+  }
+
+  &__container {
+    @include flexBox;
+    gap: 2em;
+    background-color: $light;
+    padding: 1em;
+  }
+
+  &__paragraph {
+    color: $intro;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.5em;
+  }
+}
+
+.alert {
+  @include flexBox;
+  background-color: $alert;
+  color: $light;
+  width: 100%;
+  padding: 1em;
+
+  &__ul {
+    @include flexBox;
+    gap: 0.3em;
+  }
+
+  &__link {
+    font-weight: 600;
+    text-decoration: underline;
+  }
+}
+
+.grid {
+  background-color: $light;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16em, 1fr));
+  padding: 6em 1.5em;
+  gap: 3em;
+
+  &__li {
+    @include flexBox($ai: start, $jc: start);
+    gap: 1em;
+  }
+
+  &__title {
+    font-size: 1.5em;
+    font-family: $second-font;
+  }
+
+  &__paragraph {
+    font-size: 1.1em;
+    line-height: 1.5em;
+  }
+
+  &__link {
+    color: $links;
+  }
+}
+
+.footer {
+  @include flexBox($ai: start);
+  padding: 1em;
+  width: 100%;
+
+  &__copy {
+    line-height: 1.5em;
+  }
+
+  &__licence {
+    color: $links;
+    border-bottom: 1px solid $underline;
+  }
+
+  &__nav {
+    @include flexBox($ff: row wrap);
+    gap: 1em;
+  }
+
+  &__menu {
+    @include flexBox($ff: row wrap);
+  }
+
+  &__link {
+    color: $links;
+    border-bottom: 1px solid $underline;
+  }
+
+  &__social {
+    @include flexBox;
+    gap: 1em;
+  }
+
+  &__li {
+    @include flexBox;
+    width: 16em;
+    height: 2em;
+  }
+
+  &__li--twitter {
+    background-color: $twitter;
+    border-radius: 5em;
+    padding: 0.2em 0.5em;
+    cursor: pointer;
+  }
+
+  &__link--twitter {
+    @include flexBox($ff: row nowrap);
+    gap: 0.5em;
+    color: $light;
+    border-bottom: unset;
+    font-size: 0.9em;
+  }
+
+  &__icon {
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  &__link--macstadium {
+    @include flexBox;
+    border-bottom: unset;
+    width: 8em;
+  }
+}
+
+@media (min-width: 960px) {
+  .banner {
+    padding: 3em 2em;
+    &__h2 {
+      font-size: 2em;
+    }
+  }
+  .nav {
+    flex-flow: row nowrap;
+    align-items: center;
+    padding: 2em;
+    gap: 4em;
+    &__logo {
+      width: 20%;
+    }
+    &__menu {
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    &__form {
+      width: 30%;
+    }
+  }
+
+  .main {
+    &__title {
+      font-size: 5em;
+      margin: 1em 0 0;
+    }
+
+    &__container {
+      flex-flow: row nowrap;
+      padding: 1em 2em;
+    }
+
+    &__paragraph {
+      width: 50%;
+      font-size: 1.8em;
+    }
+
+    &__img {
+      width: 50%;
+    }
+  }
+
+  .alert {
+    padding: 1.5em;
+    &__ul {
+      flex-flow: row nowrap;
+      gap: 1em;
+    }
+  }
+
+  .grid {
+    padding: 6em 2em;
+    &__title {
+      font-size: 1.9em;
+    }
+  }
+
+  .footer {
+    padding: 2em;
+    &__nav {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    &__menu {
+      gap: 1em;
+    }
+  }
+}
