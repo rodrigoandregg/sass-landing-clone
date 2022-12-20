@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sass: syntactically Awesome Style Sheets</title>
+  <link rel="stylesheet" href="./src/css/style.css">
+  <script defer src="./src/js/main.js"></script>
+  <!-- ionic icons -->
+  <script defer type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script defer nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+  <!--⚰-->
+  <!--
+<ion-icon name="search-outline"></ion-icon>
+<ion-icon name="logo-twitter"></ion-icon>
+  -->
+  <header class="header">
+    <section class="header__banner banner">
+      <h2 class="banner__h2">Black Lives Matter</h2>
+      <p class="banner__p">Sass stands with the protesters against police violence. We encourage our users to get in the
+        streets and join them if you can.</p>
+    </section>
+    <div class="header__gradient"></div>
+    <nav class="header__nav nav">
+      <a href="#" class="nav__logo">
+        <img src="_./src/images/svg/sass-logo.svg" alt="sass logo" class="nav__img">
+      </a>
+      <ul class="nav__menu">
+        <li class="nav__item"><a href="#" class="nav__link">Install</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Learn Sass</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Documentation</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Get Involved</a></li>
+      </ul>
+      <form class="nav__form">
+        <ion-icon name="search-outline" class="nav__icon"></ion-icon>
+        <input type="search" name="search" id="search" class="nav__search" placeholder="Search">
+      </form>
+    </nav>
+  </header>
+  <main class="main">
+    <h1 class="main__title">CSS With superpawers</h1>
+    <div class="main__container">
+      <p class="main__paragraph">Sass is the most mature, stable, and powerful professional grade CSS extension language
+        in the world.</p>
+      <img src="_./src/images/svg/glasses.svg" alt="glasses illustration" class="main__img">
+    </div>
+    <div class="main__alert alert">
+      <ul class="alert__ul">
+        <li class="alert__li">Current Releases:</li>
+        <li class="alert__li"><a href="#" class="alert__link">Dart Sass 1.57.1</a></li>
+        <li class="alert__li"><a href="#" class="alert__link">LibSass 3.6.5</a></li>
+        <li class="alert__li"><a href="#" class="alert__link">Ruby Sass ⚰</a></li>
+        <li class="alert__li"><a href="#" class="alert__link">Implementation Guide</a></li>
+      </ul>
+    </div>
+    <ul class="main__grid grid">
+      <li class="grid__li">
+        <h2 class="grid__title">CSS Compatible</h2>
+        <p class="grid__paragraph">Sass is completely compatible with all versions of CSS. We take this compatibility
+          seriously, so that you can
+          seamlessly use any available CSS libraries.</p>
+      </li>
+      <li class="grid__li">
+        <h2 class="grid__title">Feature Rich</h2>
+        <p class="grid__paragraph">Sass boasts more features and abilities than any other CSS extension language out
+          there. The Sass Core Team has
+          worked endlessly to not only keep up, but stay ahead.</p>
+      </li>
+      <li class="grid__li">
+        <h2 class="grid__title">Mature</h2>
+        <p class="grid__paragraph">Sass has been actively supported for about 16 years by its loving Core Team.</p>
+      </li>
+      <li class="grid__li">
+        <h2 class="grid__title">Industry Approved</h2>
+        <p class="grid__paragraph">Over and over again, the industry is choosing Sass as the premier CSS extension
+          language.</p>
+      </li>
+      <li class="grid__li">
+        <h2 class="grid__title">Large Community</h2>
+        <p class="grid__paragraph">Sass is actively supported and developed by a consortium of several tech companies
+          and hundreds of developers.</p>
+      </li>
+      <li class="grid__li">
+        <h2 class="grid__title">Frameworks</h2>
+        <p class="grid__paragraph">There are an endless number of frameworks built with Sass. <a href="#"
+            rel="noopener noreferrer" title="Bootstrap" target="_blank">Bootstrap</a>,
+          <a href="#" rel="noopener noreferrer" title="Bourbon" target="_blank">Bourbon</a>, and
+          <a href="#" rel="noopener noreferrer" title="Susy" target="_blank">Susy</a> just to name a few.
+        </p>
+      </li>
+    </ul>
+  </main>
+  <footer class="footer">
+    <p class="footer__copy">Sass © 2006–2022 the Sass team, and numerous contributors. It is available for use and
+      modification under the <a href="#" class="footer__licence">MIT License</a>.</p>
+    <nav class="footer__nav">
+      <ul class="footer__menu">
+        <li class="footer__item">
+          <a href="#" class="footer__link" title="GitHub" rel="noopener noreferrer" target="_blank">Sass on GitHub</a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link" title="Github" rel="noopener noreferrer" target="_blank">Website Source
+            Code</a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link" title="Style Guide page" target="_blank">Style Guide</a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link" title="Community Guidelines page" target="_blank">Community Guidelines</a>
+        </li>
+      </ul>
+      <ul class="footer__social">
+        <li class="footer__li">
+          <a href="#" class="footer__link footer__link--twitter" rel="noopener noreferrer" title="Twitter"
+            target="_blank">
+            <ion-icon name="logo-twitter" class="footer__icon"></ion-icon>
+            <span class="footer__span">Follow @SassCSS</span>
+          </a>
+        </li>
+        <li class="footer__li">
+          <a href="#" class="footer__link--macstadium" rel="noopener noreferrer" title="MacStadium" target="_blank">
+            <img src="_./src/images/macstadium-logo.png" alt="MacStadium logo">
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+
+</html>
